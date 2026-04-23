@@ -18,10 +18,9 @@
     <title>Sneka Vetriappan</title>
     
     <style>
-      /* Subtle Color Palette & Justification Overrides */
+      /* Justification & Subtle Color Palette */
       :root {
-        --primary-color: #4a6fa5; /* Soft Slate Blue */
-        --secondary-color: #6c757d;
+        --primary-color: #4a6fa5; /* Professional Slate Blue */
         --bg-alt: #f8f9fa;
         --text-main: #2d3436;
       }
@@ -33,12 +32,7 @@
         text-justify: inter-word;
       }
 
-      .section__title {
-        color: var(--primary-color);
-        margin-bottom: 3rem;
-      }
-
-      .about__name {
+      .section__title, .about__name, h3 {
         color: var(--primary-color);
       }
 
@@ -52,21 +46,6 @@
         transform: translateY(-5px);
       }
 
-      .skills__list-item.btn--plain {
-        border: 1px solid #e0e0e0;
-        color: var(--text-main);
-        background: #fff;
-      }
-
-      .skills__list-item.btn--plain:hover {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-      }
-
-      h3 {
-        color: var(--primary-color);
-      }
-
       .btn--outline {
         border: 2px solid var(--primary-color);
         color: var(--primary-color);
@@ -75,6 +54,11 @@
       .btn--outline:hover {
         background-color: var(--primary-color);
         color: #fff;
+      }
+
+      .skills__list-item.btn--plain {
+        border: 1px solid #e0e0e0;
+        background: #fff;
       }
     </style>
   </head>
@@ -93,8 +77,13 @@
           <li class="nav__list-item"><a class="link link--nav" href="#skills">Skills</a></li>
           <li class="nav__list-item"><a class="link link--nav" href="#contact">Contact</a></li>
         </ul>
+
         <button type="button" aria-label="toggle theme" class="btn btn--icon">
           <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
         </button>
       </nav>
     </header>
@@ -102,7 +91,7 @@
     <main>
       <section class="about center" id="about">
         <img src="./Sneka Vetriappan.jpg" alt="Sneka Vetriappan" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4a6fa5; object-fit: cover; margin-bottom: 1rem;">
-        <h1 style="text-indent: 0; padding-left: 0;">Hi, I am <span class="about__name">Sneka Vetriappan</span></h1>
+        <h1 style="text-indent: 0; padding-left: 0;">Hi, I am <span class="about__name" style="display: inline-block; letter-spacing: normal;">Sneka Vetriappan</span></h1>
         <h2 class="about__role">Data & Systems Analyst</h2>
         <p class="about__desc">
           A Systems & Data Analyst with 3+ years of experience building reliable management platforms and automated data pipelines. I focus on transforming fragmented technical requirements into scalable, user-centric solutions.
@@ -133,7 +122,7 @@
           <div class="project">
             <h3>My Approach</h3>
             <p class="project__description">
-              I'm a fast learner who loves that moment when a complex problem finally clicks. I make it a point to ask the right questions early on, and I'm pretty relentless about sticking with a challenge until the solution is running perfectly.
+              I'm a fast learner who thrives on "the click" moment. I pride myself on asking the right questions early and simply don't stop until a solution is working perfectly.
             </p>
           </div>
         </div>
@@ -142,21 +131,37 @@
       <section class="section experience" id="experience">
         <h2 class="section__title">Work Experience</h2>
         <div class="projects__grid">
+          
           <div class="project">
             <h3>TruDataRx</h3>
             <p><strong>Support Analyst</strong> | Oct 2025 – Present</p>
-            <p class="project__description">Automated clinical data ingestion via Python, cutting processing time by 40%. Optimized backend architecture via SQL to improve reporting performance by 30%.</p>
+            <p class="project__description">Automated clinical data ingestion via Python, cutting processing time by 40%. Optimized backend architecture via SQL to improve Looker reporting performance by 30%.</p>
           </div>
+
           <div class="project">
-            <h3>Automation Technologies LLC</h3>
+            <h3>Automation Technologies</h3>
             <p><strong>Data Systems Analyst</strong> | Jan 2025 – Sep 2025</p>
-            <p class="project__description">Architected Python-driven REST API pipelines for 50k+ records. Reduced manual triage by 35% by re-engineering parsing logic.</p>
+            <p class="project__description">Architected Python-driven REST API pipelines for 50k+ healthcare records. Reduced manual triage by 35% by re-engineering JSON/XML parsing logic.</p>
           </div>
+
           <div class="project">
             <h3>One Community Global</h3>
             <p><strong>Data Analyst</strong> | Feb 2024 – Jan 2025</p>
-            <p class="project__description">Built SQL models and Tableau dashboards that boosted engagement by 20%. Authored SOPs that accelerated team ramp-up.</p>
+            <p class="project__description">Built SQL models and Tableau dashboards that boosted campaign engagement by 20%. Authored technical SOPs that accelerated team ramp-up by 30%.</p>
           </div>
+
+          <div class="project">
+            <h3>BU IT Help Center</h3>
+            <p><strong>IT Analyst</strong> | Sep 2022 – Sep 2023</p>
+            <p class="project__description">Resolved 400+ weekly technical incidents via ServiceNow with 98% SLA adherence. Managed identity verification and secure MFA workflows.</p>
+          </div>
+
+          <div class="project">
+            <h3>Accenture</h3>
+            <p><strong>Associate Software Engineer</strong> | May 2021 – Jul 2022</p>
+            <p class="project__description">Streamlined DevOps for global business units via automated ETL deployments. Maintained 98% uptime for leadership dashboards using Datadog.</p>
+          </div>
+
         </div>
       </section>
 
@@ -169,7 +174,7 @@
           </div>
           <div class="project">
             <h3>PSG College of Technology</h3>
-            <p><strong>Bachelor of Technology, IT</strong><br>2017 - 2021</p>
+            <p><strong>Bachelor of Technology, Information Technology</strong><br>Aug 2017 - May 2021</p>
           </div>
         </div>
       </section>
@@ -177,37 +182,112 @@
       <section id="projects" class="section projects">
         <h2 class="section__title">Projects</h2>
         <div class="projects__grid">
+          
           <div class="project">
             <img src="./img1.jpeg" alt="Drowsiness Detection" style="width:100%; border-radius:8px; margin-bottom:10px;">
             <h3>Driver Drowsiness Detection</h3>
             <p class="project__description">Real-time computer vision pipeline using CNNs and LSTM networks to monitor fatigue and trigger alerts.</p>
             <ul class="project__stack">
-              <li class="project__stack-item">Python</li><li class="project__stack-item">TensorFlow</li>
+              <li class="project__stack-item">Python</li><li class="project__stack-item">TensorFlow</li><li class="project__stack-item">OpenCV</li>
             </ul>
-            <a href="https://github.com/snekajo/Driver-Drowsiness-Detection-System" class="link link--icon"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/snekajo/Driver-Drowsiness-Detection-System/blob/main/driver_drowsiness_detection.py" class="link link--icon"><i class="fab fa-github"></i></a>
           </div>
+
           <div class="project">
             <img src="./img2.jpeg" alt="NYC Collision" style="width:100%; border-radius:8px; margin-bottom:10px;">
             <h3>NYC Collision Prediction</h3>
             <p class="project__description">End-to-end pipeline processing NYC Open Data using predictive modeling to identify high-risk factors.</p>
             <ul class="project__stack">
-              <li class="project__stack-item">Python</li><li class="project__stack-item">Scikit-Learn</li>
+              <li class="project__stack-item">Python</li><li class="project__stack-item">Scikit-Learn</li><li class="project__stack-item">Pandas</li>
             </ul>
-            <a href="https://github.com/snekajo/Motor-Vehicle-Collision" class="link link--icon"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/snekajo/Motor-Vehicle-Collision---Damage-Prediction---NYC/blob/main/motor_vehicle_collision.py" class="link link--icon"><i class="fab fa-github"></i></a>
           </div>
+
+          <div class="project">
+            <img src="./img3.jpeg" alt="BU Digital Card" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>BU Digital Card</h3>
+            <p class="project__description">Responsive digital identity app optimized for fast networking performance across mobile and desktop.</p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li><li class="project__stack-item">JavaScript</li><li class="project__stack-item">CSS3</li>
+            </ul>
+            <a href="https://github.com/snekajo/BU-Digital-Card/blob/main/Final%20Paper.pdf" class="link link--icon"><i class="fas fa-file-pdf"></i></a>
+          </div>
+
+          <div class="project">
+            <img src="./img4.jpeg" alt="Hospital Management" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Hospital Management System</h3>
+            <p class="project__description">Relational database design for healthcare with complex SQL normalization and ETL reporting logic.</p>
+            <ul class="project__stack">
+              <li class="project__stack-item">SQL</li><li class="project__stack-item">Oracle</li><li class="project__stack-item">Database Design</li>
+            </ul>
+            <a href="https://github.com/snekajo/Database---Hospital-Management-System/blob/main/CS669_Sneka_Vetriappan_Iteration4.pdf" class="link link--icon"><i class="fas fa-file-pdf"></i></a>
+          </div>
+
+          <div class="project">
+            <img src="./img5.jpeg" alt="Homey E-Commerce" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Homey: E-Commerce Platform</h3>
+            <p class="project__description">Scalable furniture retail system featuring secure authentication and seamless database integration.</p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Java</li><li class="project__stack-item">Spring Boot</li><li class="project__stack-item">MySQL</li>
+            </ul>
+            <a href="https://github.com/snekajo/Homey-Online-Furniture-Shopping" class="link link--icon"><i class="fab fa-github"></i></a>
+          </div>
+
+          <div class="project">
+            <img src="./img6.jpeg" alt="Injury Severity" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Injury Severity Prediction</h3>
+            <p class="project__description">Predictive classification model using advanced statistical techniques and comparative model analysis in R.</p>
+            <ul class="project__stack">
+              <li class="project__stack-item">R</li><li class="project__stack-item">ML</li><li class="project__stack-item">Statistics</li>
+            </ul>
+            <a href="https://github.com/snekajo/Injury-Severity-Prediction/blob/main/Code.R" class="link link--icon"><i class="fab fa-github"></i></a>
+          </div>
+
         </div>
       </section>
 
       <section class="section skills" id="skills">
         <h2 class="section__title">Skills</h2>
         <div style="text-align: center;">
-          <h3>Programming</h3>
+          
+          <h3 style="margin-top:2rem;">Programming</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">SQL</li><li class="skills__list-item btn btn--plain">Python</li><li class="skills__list-item btn btn--plain">R</li><li class="skills__list-item btn btn--plain">Java</li>
+            <li class="skills__list-item btn btn--plain">SQL</li>
+            <li class="skills__list-item btn btn--plain">Python</li>
+            <li class="skills__list-item btn btn--plain">R</li>
+            <li class="skills__list-item btn btn--plain">Java</li>
           </ul>
-          <h3>BI & Cloud</h3>
+
+          <h3 style="margin-top:2rem;">BI & ETL Tools</h3>
           <ul class="skills__list">
-            <li class="skills__list-item btn btn--plain">Tableau</li><li class="skills__list-item btn btn--plain">AWS</li><li class="skills__list-item btn btn--plain">Azure</li><li class="skills__list-item btn btn--plain">Snowflake</li>
+            <li class="skills__list-item btn btn--plain">Tableau</li>
+            <li class="skills__list-item btn btn--plain">Power BI</li>
+            <li class="skills__list-item btn btn--plain">Alteryx</li>
+            <li class="skills__list-item btn btn--plain">Power Query</li>
+            <li class="skills__list-item btn btn--plain">Excel (VBA/Pivot)</li>
+          </ul>
+
+          <h3 style="margin-top:2rem;">DevOps & Cloud</h3>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">AWS</li>
+            <li class="skills__list-item btn btn--plain">Microsoft Azure</li>
+            <li class="skills__list-item btn btn--plain">Jenkins</li>
+            <li class="skills__list-item btn btn--plain">GitHub</li>
+          </ul>
+
+          <h3 style="margin-top:2rem;">Data Management & Warehousing</h3>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Snowflake</li>
+            <li class="skills__list-item btn btn--plain">Azure Data Factory</li>
+            <li class="skills__list-item btn btn--plain">Google BigQuery</li>
+          </ul>
+
+          <h3 style="margin-top:2rem;">Collaboration & Documentation</h3>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Confluence</li>
+            <li class="skills__list-item btn btn--plain">Jira</li>
+            <li class="skills__list-item btn btn--plain">Microsoft Teams</li>
+            <li class="skills__list-item btn btn--plain">Slack</li>
           </ul>
         </div>
       </section>
@@ -215,13 +295,18 @@
       <section class="section contact center" id="contact">
         <h2 class="section__title">Contact</h2>
         <div class="contact__container center" style="flex-direction: column;">
-          <a href="mailto:snekajo@gmail.com"><span class="btn btn--outline">Email me</span></a>
-          <div class="contact__socials" style="margin-top: 2.5rem; display: flex; gap: 30px;">
-            <a href="https://github.com/snekajo" target="_blank" class="link" style="display: flex; align-items: center; gap: 8px;">
-              <i class="fab fa-github"></i><span>GitHub</span>
+          <a href="mailto:snekajo@gmail.com">
+            <span class="btn btn--outline">Email me</span>
+          </a>
+
+          <div class="contact__socials" style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+            <a href="https://github.com/snekajo" target="_blank" class="link" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+              <i class="fab fa-github" style="font-size: 1.5rem;"></i>
+              <span style="font-weight: 500;">GitHub</span>
             </a>
-            <a href="https://www.linkedin.com/in/snekavetriappan/" target="_blank" class="link" style="display: flex; align-items: center; gap: 8px;">
-              <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/snekavetriappan/" target="_blank" class="link" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+              <i class="fab fa-linkedin" style="font-size: 1.5rem;"></i>
+              <span style="font-weight: 500;">LinkedIn</span>
             </a>
           </div>
         </div>
@@ -231,6 +316,7 @@
     <footer class="footer">
       <a href="https://snekajo.github.io" class="link footer__link">© 2026 Sneka Vetriappan</a>
     </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>
